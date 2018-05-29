@@ -6,7 +6,8 @@
   </head>
   <body>
   	<script type="text/javascript">
-  		
+
+  		// Randomly returns Rock, Paper, or Scissors
   		function computerPlay() {
   			let randomNumber = Math.random();
   			if (randomNumber <= 0.33) {
@@ -18,8 +19,44 @@
   			}
   		}
 
+  		// Play a round of rock, paper, scissors.
   		function playRound(playerSelection, computerSelection) {
+  			let playerThrow = playerSelection.toUpperCase();
 
+  			if (playerThrow == "ROCK") {
+  				switch (computerSelection()) {
+  					case "Rock":
+  						return "Tie!"
+  						break;
+  					case "Paper":
+  						return "You Lose! Paper beats Rock"
+  						break;
+  					case "Scissors":
+  						return "You Win!"
+  				}
+  			} else if (playerThrow == "PAPER") {
+  				switch (computerSelection()) {
+  					case "Rock":
+  						return "You Win!"
+  						break;
+  					case "Paper":
+  						return "Tie!"
+  						break;
+  					case "Scissors":
+  						return "You Lose! Scissors beats Paper"
+  				}
+  			} else {
+  				switch (computerSelection()) {
+  					case "Rock":
+  						return "You Lose! Rock beats Scissors"
+  						break;
+  					case "Paper":
+  						return "You Win!"
+  						break;
+  					case "Scissors":
+  						return "Tie!"
+  				}
+  			}
   		}
   	</script>
   </body>
