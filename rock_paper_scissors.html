@@ -7,6 +7,20 @@
   <body>
   	<script type="text/javascript">
   		
+  		function computerPlay() {
+  			let randomNumber = Math.random();
+  			if (randomNumber <= 0.33) {
+  				return "Rock";
+  			} else if (randomNumber > 0.33 && randomNumber <= 0.66) {
+  				return "Paper";
+  			} else {
+  				return "Scissors";
+  			}
+  		}
+
+  		function playRound(playerSelection, computerSelection) {
+
+  		}
   	</script>
   </body>
 </html>
