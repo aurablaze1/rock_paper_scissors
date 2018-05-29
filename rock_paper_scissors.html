@@ -26,24 +26,24 @@
   			if (playerThrow == "ROCK") {
   				switch (computerSelection()) {
   					case "Rock":
-  						return "Tie!"
+  						return "Tie!";
   						break;
   					case "Paper":
-  						return "You Lose! Paper beats Rock"
+  						return "You Lose! Paper beats Rock";
   						break;
   					case "Scissors":
-  						return "You Win!"
+  						return "You Win!";
   				}
   			} else if (playerThrow == "PAPER") {
   				switch (computerSelection()) {
   					case "Rock":
-  						return "You Win!"
+  						return "You Win!";
   						break;
   					case "Paper":
-  						return "Tie!"
+  						return "Tie!";
   						break;
   					case "Scissors":
-  						return "You Lose! Scissors beats Paper"
+  						return "You Lose! Scissors beats Paper";
   				}
   			} else {
   				switch (computerSelection()) {
@@ -51,11 +51,40 @@
   						return "You Lose! Rock beats Scissors"
   						break;
   					case "Paper":
-  						return "You Win!"
+  						return "You Win!";
   						break;
   					case "Scissors":
-  						return "Tie!"
+  						return "Tie!";
   				}
+  			}
+  		}
+
+  		function game() {
+  			let playerScore = 0;
+  			let computerScore = 0;
+
+  			while ((playerScore < 5) || (computerScore < 5)) {
+  				
+  				let rpsPick = prompt("Rock, Paper, or Scissors?");
+  				let result = playRound(rpsPick, computerPlay);
+
+  				switch (result) {
+  					case: "You Win!":
+  						playerScore++;
+  						console.log(`Current score - Player: ${playerScore} Computer: ${computerScore}`);
+  						break;
+  					case: "Tie!":
+  						console.log(`Current score - Player: ${playerScore} Computer: ${computerScore}`);
+  						break;
+  					default:
+  						computerScore++;
+  						console.log(`Current score - Player: ${playerScore} Computer: ${computerScore}`);
+  				}
+  			}
+  			if (playerScore > computerScore) {
+  				console.log("You Win!");
+  			} else {
+  				console.log("you Lose!");
   			}
   		}
   	</script>
