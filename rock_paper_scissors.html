@@ -63,17 +63,17 @@
   			let playerScore = 0;
   			let computerScore = 0;
 
-  			while ((playerScore < 5) || (computerScore < 5)) {
+  			while ((playerScore < 5) && (computerScore < 5)) {
   				
   				let rpsPick = prompt("Rock, Paper, or Scissors?");
   				let result = playRound(rpsPick, computerPlay);
 
   				switch (result) {
-  					case: "You Win!":
+  					case "You Win!":
   						playerScore++;
   						console.log(`Current score - Player: ${playerScore} Computer: ${computerScore}`);
   						break;
-  					case: "Tie!":
+  					case "Tie!":
   						console.log(`Current score - Player: ${playerScore} Computer: ${computerScore}`);
   						break;
   					default:
